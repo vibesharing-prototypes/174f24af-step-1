@@ -1991,7 +1991,7 @@ function DashboardContent({
   hasTamboProvider?: boolean;
   showChat?: boolean;
   chatMessages?: ChatMessage[];
-  chatEndRef?: React.RefObject<HTMLDivElement | null>;
+  chatEndRef?: React.RefObject<HTMLDivElement>;
 }) {
   const isIphone = device === "iphone";
   const isIpad = device === "ipad";
