@@ -1985,7 +1985,7 @@ function DashboardContent({
   setPopoverPos: (p: { x: number; y: number }) => void;
   popoverHovered: boolean;
   setPopoverHovered: (v: boolean) => void;
-  tickerRef: React.RefObject<HTMLDivElement | null>;
+  tickerRef: React.RefObject<HTMLDivElement>;
   device?: DeviceType;
   onOpenCanvas: (canvas: CanvasType) => void;
   hasTamboProvider?: boolean;
@@ -2916,7 +2916,7 @@ function PageContent({ hasTamboProvider = false }: { hasTamboProvider?: boolean 
   const [hoveredAgent, setHoveredAgent] = React.useState<AgentStatus | null>(null);
   const [popoverPos, setPopoverPos] = React.useState({ x: 0, y: 0 });
   const [popoverHovered, setPopoverHovered] = React.useState(false);
-  const tickerRef = React.useRef<HTMLDivElement | null>(null);
+  const tickerRef = React.useRef<HTMLDivElement>(null);
   
   // Canvas state
   const [activeCanvas, setActiveCanvas] = React.useState<CanvasType>("none");
