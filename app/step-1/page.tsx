@@ -1452,7 +1452,8 @@ function TamboPromptBoxWithHooks({ vision, onOpenCanvas, onFocusChange }: { visi
   const [isFocused, setIsFocused] = React.useState(false);
   const messagesEndRef = React.useRef<HTMLDivElement>(null);
   const messagesContainerRef = React.useRef<HTMLDivElement>(null);
-  const tamboThread = useTamboThread();
+  // Tambo not available in VibeSharing - demo mode only
+  const tamboThread = null as unknown as { sendThreadMessage: (msg: string) => Promise<unknown> };
   
   // Track focus state - focused when input focused OR has messages
   const isActive = isFocused || messages.length > 0;
